@@ -6,43 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Dah!</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
 </head>
 <body>
     <div class="container">
-        <header class="sitehead">
-            <div class="sitehead__logoslogan">
-                <h1 class="logo">To-Dah!</h1>
-                <p class="slogan">A simple, efficient to-do list app.</p>
-            </div>
-            <nav class="sitehead__navigation">
-                <ul class="navlist">
-                    <li class="navlist__element"><a href="" class="navlist__link">Clear</a></li>
-                    <li class="navlist__element"><a href="" class="navlist__link">Save</a></li>
-                    <li class="navlist__element"><a href="" class="navlist__link">Options</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="sitebody">
-            <div class="listbox">
-                <div class="listintro">
-                    <h2 class="listintro__title">Your To-dah List</h2>
-                    <p class="listintro__description">Add and remove items as you please!</p>
-                </div>
-                <div class="listbody">
-                    <ul>
-                        <li class="element">Test this out!</li>
-                        <form>
-                            <input type="text" id="textinput" placeholder="Add to your list...">
-                        </form>
-                        
-                    </ul>
-                </div>
-                
-            </div>
-        </main>
-        <footer class="sitefoot">
-            <div>jf</div>
-        </footer>
+        <h1>ToDah</h1>
+        <h2>A simple, vanilla Javascript To-Do app.</h2>
+
+        <form class="todo">
+            <input type="text" class="todo__input" placeholder="Add a new item...">
+            <button type="submit" class="todo__add">Add</button>
+        </form>
+
+        <ul class="todo__items">
+            <li class="item" data-key="12354892349">
+                Item 1
+                <a><i class="fas fa-trash"></i></a>
+            </li>
+        </ul>
     </div>
     <script src="/scripts/script.js"></script>
 </body>
