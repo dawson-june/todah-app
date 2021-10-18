@@ -5,11 +5,26 @@ const todoItemsList = document.querySelector(".todo__items");
 let todos = [];
 let trashIcons = [];
 
+window.addEventListener('load', function(e) {
+    if(localStorage.getItem("todos") != null) {
+        todos = retrieveFromLocalStorage();
+        renderTodos(todos);
+    }
+});
+
+window.addEventListener('beforeunload', function(e) {
+    e.preventDefault();
+    saveToLocalStorage();
+});
+    
+
 todoForm.addEventListener('submit', function(event) {
     // Prevent the page from reloading when submitting the form.
     event.preventDefault();
     // call the addTodo function with input
     addTodo(todoInput.value);
+    saveToLocalStorage();
+    retrieveFromLocalStorage();
 });
 
 function addTodo(item) {
@@ -42,23 +57,21 @@ function deleteTodo(item) {
     let id = item.getAttribute("data-key");
     let todoItem = getItemByID(id);
     todos = arrayRemove(todoItem);
-    console.log(todos);
     renderTodos(todos);
 }
 
 function getItemByID(id) {
+    let foundItem;
     todos.forEach(item => {
         if(item.id == id) {
-            console.log(item);
-            return item;
+            foundItem = item;
         }
     });
+    return foundItem;
 }
 
 function arrayRemove(value) {
-    console.log(value);
     return todos.filter(element => {
-        console.log(element);
         return element != value; 
     });
 }
@@ -70,6 +83,15 @@ function findTrashIcons() {
             deleteTodo(item.parentElement);
         });
     });
+}
+
+function saveToLocalStorage() {
+    console.log(todos);
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function retrieveFromLocalStorage() {
+    return JSON.parse(localStorage.getItem("todos"));
 }
 /*
 

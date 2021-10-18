@@ -1,0 +1,22 @@
+{
+  "name": "todah-app",
+  "version": "1.0.0",
+  "description": "Simple To-Do app made with HTML, CSS, and Javascript",
+  "main": "scripts/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawson-june/todah-app.git"
+  },
+  "author": "Dawson June",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dawson-june/todah-app/issues"
+  },
+  "homepage": "https://github.com/dawson-june/todah-app#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
+}
