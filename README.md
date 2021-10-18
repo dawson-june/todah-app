@@ -1,2 +1,2 @@
 # todah-app
-A simple web-based to-do app.
+A simple vanilla Javascript to-do app.
