@@ -9,6 +9,8 @@ html {
 
 body {
     height: 100vh;
+    background-color: #F1FAEE;
+    color: #05090F;
 }
 
 ul {
@@ -23,7 +25,7 @@ li {
     display: flex;
     padding: 1rem;
     justify-content: space-between;
-    border: .1rem black solid;
+    border: .15rem #05090F solid;
     border-radius: .75rem;
     align-items: center;
     width: 100%;
@@ -38,8 +40,9 @@ form {
 input { 
     border-width: .2rem;
     border-radius: .75rem;
-    border-color: black;
+    border-color: #05090F;
     padding: .5rem;
+    background-color: #F1FAEE;
 }
 
 .container {
@@ -58,15 +61,22 @@ input {
 .container h2 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: #14253D;
 }
 
 .todo__add {
     padding: .5rem 1rem;
     cursor: pointer;
     border-radius: .75rem;
-    border-color: black;
+    border-color: #05090F;
+    background-color: #F1FAEE;
 }
 
 a {
     cursor: pointer;
+}
+
+span {
+    font-style: italic;
+    color: #E63946;
 }
