@@ -23,6 +23,7 @@
     "@rollup/plugin-typescript": "^8.5.0",
     "@tsconfig/svelte": "^3.0.0",
     "rollup-plugin-svelte": "^7.1.0",
+    "sass": "^1.54.9",
     "svelte": "^3.50.1",
     "svelte-check": "^2.9.0",
     "svelte-preprocess": "^4.10.7",

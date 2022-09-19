@@ -19,6 +19,9 @@ export default {
         preprocess: autoPreprocess(),
       // Tell the svelte plugin where our svelte files are located
       include: './src/**/*.svelte',
+      css: css => {
+        css.write('dist/bundle.css')
+      },
     }),
     typescript({sourceMap: !production}),
     // Tell any third-party plugins that we're building for the browser
