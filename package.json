@@ -4,7 +4,7 @@
   "description": "Simple To-Do app made with HTML, CSS, and Javascript",
   "main": "scripts/script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "homepage": "https://github.com/dawson-june/todah-app#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4"
+  },
+  "devDependencies": {
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.50.1"
   }
 }
