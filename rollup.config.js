@@ -1,5 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
+import autoPreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
   // This `main.js` file we wrote
@@ -14,9 +16,11 @@ export default {
   },
   plugins: [
     svelte({
+        preprocess: autoPreprocess(),
       // Tell the svelte plugin where our svelte files are located
-      include: 'src/**/*.svelte',
+      include: './src/**/*.svelte',
     }),
+    typescript({sourceMap: !production}),
     // Tell any third-party plugins that we're building for the browser
     resolve({ browser: true }),
   ],
